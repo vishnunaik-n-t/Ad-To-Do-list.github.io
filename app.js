@@ -89,7 +89,7 @@ function deleteTodo(key) {
 }
 
 document.querySelector(".js-todo-list").addEventListener("click", event => {
-    if (event.target.closest("li") && !event.target.closest(".js-delete-todo")) {  
+    if (event.target.closest("li") && !event.target.closest(".js-delete-todo") && !event.target.closest(".todo-checkbox")) {  
         const itemKey = event.target.closest("li").dataset.key;  
         editTodo(itemKey);
     }
